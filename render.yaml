@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: mood-tracker-backend
+    runtime: node
+    plan: free
+    buildCommand: npm install --include=dev && npm run build
+    startCommand: node dist/main.js
+    envVars:
+      - key: NODE_VERSION
+        value: 22.12.0
